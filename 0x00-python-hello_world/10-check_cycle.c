@@ -15,13 +15,12 @@ int check_cycle(listint_t *list)
 
 	current = list;
 
-	for (; 1 == 1;)
+	for (; current;)
 	{
+		list = current;
 		current = current->next;
 
-		if (current == NULL)
-			return (0);
-		else if (current == list)
+		if (list <= current)
 			return (1);
 	}
 
