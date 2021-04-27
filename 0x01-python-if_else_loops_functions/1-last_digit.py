@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import random
-number = str(random.randint(-10000, 10000))
+number = random.randint(-10000, 10000)
+number = str(number)
 last_digit = number[-1:]
 if number[0] == "-" and last_digit != "0":
     last_digit = "-" + last_digit
