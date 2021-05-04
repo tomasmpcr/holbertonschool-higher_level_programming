@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "lists.h"
 
-listint_t *reverse_list(listint_t **head);
+int _strlist(listint_t **head);
 
 /**
 * is_palindrome - check is palindrome
@@ -12,40 +12,47 @@ listint_t *reverse_list(listint_t **head);
 */
 int is_palindrome(listint_t **head)
 {
-	listint_t *rev_list = NULL;
+	listint_t *salto = *head;
+    int len_list = _strlist(head);
+	int sum_n = 0, i, mid = len_list / 2, rest = 0;
 
-	if (head == NULL || *head == NULL)
-		return (1);
-
-	rev_list = reverse_list(head);
-
-	for (; *head && rev_list;)
+	if (len_list % 2 == 0)
 	{
-		if ((*head)->n != rev_list->n)
-			return (0);
-
-		*head = (*head)->next;
-		rev_list = rev_list->next;
+		rest = 1;
 	}
 
-	reverse_list(&rev_list);
+	for (i = 0; salto; i++)
+	{
+		if (mid > i)
+			sum_n += salto->n;
+		else if (rest > 0)
+		{
+			rest--;
+			continue;
+		}
+		else if (mid < i)
+			sum_n -= salto->n;
+		salto = salto->next;
+	}
 
-	return (1);
+	if (sum_n == 0)
+		return (1);
+	else
+		return (0);
+    return (1);
 }
 
-listint_t *reverse_list(listint_t **head)
+int _strlist(listint_t **head)
 {
-	listint_t *next = NULL;
-	listint_t *current = *head;
-	listint_t *prev = NULL;
+	listint_t *salto = *head;
+    int i;
 
-	for (; current;)
-	{
-		next = current->next;
-		current->next = prev;
-		prev = current;
-		current = next;
-	}
+    if (salto == NULL)
+        return (0);
 
-	return (prev);
+    for (i = 0; salto; i++)
+    {
+        salto = salto->next;
+    }
+    return (i);
 }
