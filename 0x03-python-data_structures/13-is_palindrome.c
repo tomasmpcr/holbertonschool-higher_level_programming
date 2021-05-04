@@ -13,16 +13,16 @@ int _strlist(listint_t **head);
 int is_palindrome(listint_t **head)
 {
 	listint_t *salto = *head;
-	int len_list = _strlist(head);
-	int sum_n = 0, i, mid = len_list / 2, rest = 0;
+	int sum_n = 0, i, len_list, mid, rest = 0;
 
-	if (head == NULL || *head == NULL)
+	if (*head == NULL)
 		return (1);
 
+	len_list = _strlist(head);
+
+	mid = len_list / 2;
 	if (len_list % 2 == 0)
-	{
 		rest = 1;
-	}
 
 	for (i = 0; salto; i++)
 	{
