@@ -16,6 +16,9 @@ int is_palindrome(listint_t **head)
 	int len_list = _strlist(head);
 	int sum_n = 0, i, mid = len_list / 2, rest = 0;
 
+	if (head == NULL || *head == NULL)
+		return (1);
+
 	if (len_list % 2 == 0)
 	{
 		rest = 1;
