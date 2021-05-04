@@ -37,9 +37,8 @@ int is_palindrome(listint_t **head)
 
 	if (sum_n == 0)
 		return (1);
-	else
-		return (0);
-	return (1);
+
+	return (0);
 }
 
 /**
