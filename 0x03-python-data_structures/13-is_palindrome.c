@@ -9,55 +9,68 @@ int _get_n_inde_list(listint_t *head, int index);
 * is_palindrome - check is palindrome
 * @head: the pinter
 * -----------------------------------------------
-* Return int
+* Return: int
 */
 int is_palindrome(listint_t **head)
 {
-    int len_list = _strlist(*head);
-    int i, j = len_list - 1;
+	int len_list = _strlist(*head);
+	int i, j = len_list - 1;
 
-    if (head == NULL || len_list == 0)
-        return (1);
+	if (head == NULL || len_list == 0)
+		return (1);
 
-    for (i = 0; i < (len_list / 2); i++, j--)
-    {
-        if (_get_n_inde_list(*head, i) != _get_n_inde_list(*head, j))
-        {
-            return (0);
-        }
-    }
+	for (i = 0; i < (len_list / 2); i++, j--)
+	{
+		if (_get_n_inde_list(*head, i) != _get_n_inde_list(*head, j))
+		{
+			return (0);
+		}
+	}
 
-    return (1);
+	return (1);
 }
 
+/**
+* _get_n_inde_list - check is palindrome
+* @head: the pinter
+* @index: the pinter
+* -----------------------------------------------
+* Return: int
+*/
 int _get_n_inde_list(listint_t *head, int index)
 {
-    int i;
+	int i;
 
-    if (head == NULL)
-        return (-1);
+	if (head == NULL)
+		return (-1);
 
-    for (i = 0; head; i++)
-    {
-        if (i == index)
-            return (head->n);
+	for (i = 0; head; i++)
+	{
+		if (i == index)
+			return (head->n);
 
-        head = head->next;
-    }
+		head = head->next;
+	}
 
-    return (-1);
+	return (-1);
 }
 
+/**
+* _strlist - check is palindrome
+* @head: the pinter
+* -----------------------------------------------
+* Return: int
+*/
 int _strlist(listint_t *head)
 {
-    int i;
+	int i;
 
-    if (head == NULL)
-        return (0);
+	if (head == NULL)
+		return (0);
 
-    for (i = 0; head; i++)
-    {
-        head = head->next;
-    }
-    return (i);
+	for (i = 0; head; i++)
+	{
+		head = head->next;
+	}
+	return (i);
 }
