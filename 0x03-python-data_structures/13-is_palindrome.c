@@ -15,7 +15,7 @@ int is_palindrome(listint_t **head)
 	listint_t *salto = *head;
 	int sum_n = 0, i, len_list, mid, rest = 0;
 
-	if (*head == NULL)
+	if (head == NULL || *head == NULL)
 		return (1);
 
 	len_list = _strlist(head);
