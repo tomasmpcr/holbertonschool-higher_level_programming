@@ -2,6 +2,9 @@
 def roman_to_int(roman_string):
     suma = 0
 
+    if isinstance(roman_string, str) is False:
+        return (0)
+
     for i in range(0, len(roman_string)):
         if i + 1 < len(roman_string):
             if roman_value(roman_string[i]) < roman_value(roman_string[i + 1]):
