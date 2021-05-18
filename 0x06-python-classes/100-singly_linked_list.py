@@ -76,6 +76,8 @@ class SinglyLinkedList:
     def __str__(self):
         """This function return print list"""
         current_node = self.__head
+        if (current_node is None):
+            return ("")
         while current_node is not None and current_node.next_node is not None:
             print(current_node.data)
             current_node = current_node.next_node
