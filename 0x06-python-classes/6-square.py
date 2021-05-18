@@ -11,7 +11,7 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """This is the constructor of the class"""
         self.size = size
-        self.__position = position
+        self.position = position
 
     def area(self):
         """This function return area"""
