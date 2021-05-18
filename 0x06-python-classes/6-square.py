@@ -37,7 +37,7 @@ class Square:
         else:
             self.__size = value
 
-    @size.setter
+    @position.setter
     def position(self, value):
         """This property set position"""
         if (type(value) != tuple or len(value) != 2 or
