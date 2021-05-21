@@ -1,0 +1,50 @@
+#Import the function used in the test
+>>> add_integer = __import__('0-add_integer').add_integer
+
+#===========================================================================
+>>> add_integer(1, 2)
+3
+
+#===========================================================================
+>>> add_integer(1.40, 2)
+3
+
+#===========================================================================
+>>> add_integer(1, 2.5)
+3
+
+#===========================================================================
+>>> add_integer("asd", 2)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+#===========================================================================
+>>> add_integer(1, "LOL")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+#===========================================================================
+>>> add_integer("asd", "asd")
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+#===========================================================================
+>>> add_integer([1, 2, 3], 2)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+#===========================================================================
+>>> add_integer([], 2)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+#===========================================================================
+>>> add_integer(1, [])
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
