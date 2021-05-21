@@ -5,8 +5,9 @@
         add_integer
 """
 
+
 def add_integer(a, b=98):
-    """ 
+    """
         Function sum integer
     """
     if type(a) != int and type(a) != float:
