@@ -1,0 +1,12 @@
+#Import the function used in the test
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+#==================================================================================================
+>>> text_indentation("ASD")
+ASD
+
+#==================================================================================================
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
