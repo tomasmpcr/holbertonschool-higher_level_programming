@@ -119,5 +119,5 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """ This function runs when this class is removed """
-        ram = cls(size, size)
+        ram = Rectangle(size, size)
         return (ram)
