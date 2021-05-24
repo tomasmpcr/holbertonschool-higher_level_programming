@@ -102,6 +102,7 @@ class Rectangle:
     "======================================================================="
 
     def bigger_or_equal(rect_1, rect_2):
+        """ This function runs when this class is removed """
         if type(rect_1) != Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         elif type(rect_2) != Rectangle:
@@ -117,5 +118,6 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        """ This function runs when this class is removed """
         ram = cls(size, size)
         return (ram)
