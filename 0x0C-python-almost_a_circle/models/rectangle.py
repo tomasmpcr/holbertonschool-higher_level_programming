@@ -141,6 +141,7 @@ class Rectangle(Base):
         return
 
     def to_dictionary(self):
+        """ Funcion """
         new_dict = {}
         new_dict["x"] = self.x
         new_dict["y"] = self.y
