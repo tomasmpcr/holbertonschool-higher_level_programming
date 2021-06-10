@@ -17,7 +17,7 @@ class Rectangle(Base):
         """ Funcion init """
         super().__init__(id)
         self.width = width
-        self.heigh = height
+        self.height = height
         self.x = x
         self.y = y
         return
@@ -42,7 +42,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """ Funcion """
-        self.value_valid("heigh", value)
+        self.value_valid("height", value)
         self.__height = value
         return
 
@@ -82,4 +82,4 @@ class Rectangle(Base):
 
     def area(self):
         """ Funcion """
-        return (self.__heigh * self.__width)
+        return (self.__height * self.__width)
