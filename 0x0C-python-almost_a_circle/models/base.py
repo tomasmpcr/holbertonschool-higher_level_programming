@@ -37,3 +37,10 @@ class Base():
         with open("{}.json".format(cls.__name__), "+w") as file:
             file.write(cls.to_json_string(new_list))
         return
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ Funcion """
+        if json_string is None:
+            return([])
+        return(json.loads(json_string))
