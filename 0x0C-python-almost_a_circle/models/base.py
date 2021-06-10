@@ -34,7 +34,6 @@ class Base():
         if list_objs is not None:
             for element in list_objs:
                 new_list.append(element.to_dictionary())
-        print(cls.to_json_string(new_list))
-        with open("{}.json".format(cls.__name__), "w") as file:
+        with open("{}.json".format(cls.__name__), "+w") as file:
             file.write(cls.to_json_string(new_list))
         return
