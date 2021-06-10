@@ -15,11 +15,11 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """ Funcion init """
+        super().__init__(id)
         self.width = width
         self.heigh = height
         self.x = x
         self.y = y
-        super().__init__(id)
         return
 
     @property
@@ -35,15 +35,15 @@ class Rectangle(Base):
         return
 
     @property
-    def heigh(self):
+    def height(self):
         """ Funcion """
-        return(self.__heigh)
+        return(self.__height)
 
-    @heigh.setter
-    def heigh(self, value):
+    @height.setter
+    def height(self, value):
         """ Funcion """
         self.value_valid("heigh", value)
-        self.__heigh = value
+        self.__height = value
         return
 
     @property
