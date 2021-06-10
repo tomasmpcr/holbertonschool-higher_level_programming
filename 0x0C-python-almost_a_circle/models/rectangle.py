@@ -98,21 +98,44 @@ class Rectangle(Base):
             self.id, self.x, self.y, self.width, self.height
         ))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ Funcion """
         switcher = {
-            1: lambda value: [None for self.id in [value]],
-            2: lambda value: [None for self.width in [value]],
-            3: lambda value: [None for self.height in [value]],
-            4: lambda value: [None for self.x in [value]],
-            5: lambda value: [None for self.y in [value]]
+            1:
+                lambda value: [None for self.id in [value]],
+            "id":
+                lambda value: [None for self.id in [value]],
+            2:
+                lambda value: [None for self.width in [value]],
+            "width":
+                lambda value: [None for self.width in [value]],
+            3:
+                lambda value: [None for self.height in [value]],
+            "height":
+                lambda value: [None for self.height in [value]],
+            4:
+                lambda value: [None for self.x in [value]],
+            "x":
+                lambda value: [None for self.x in [value]],
+            5:
+                lambda value: [None for self.y in [value]],
+            "y":
+                lambda value: [None for self.y in [value]]
         }
 
-        i = 1
-        for arg in args:
-            func = switcher.get(i, "return")
+        if args is not None and len(args) > 0:
+            i = 1
+            for arg in args:
+                func = switcher.get(i, "return")
+                if func == "return":
+                    return
+                func(arg)
+                i = i + 1
+            return
+
+        for item in kwargs.items():
+            func = switcher.get(item[0], "return")
             if func == "return":
                 return
-            func(arg)
-            i = i + 1
+            func(item[1])
         return
