@@ -71,3 +71,12 @@ class Square(Rectangle):
                 return
             func(item[1])
         return
+
+    def to_dictionary(self):
+        """ Funcion """
+        new_dict = {}
+        new_dict["id"] = self.id
+        new_dict["x"] = self.x
+        new_dict["size"] = self.size
+        new_dict["y"] = self.y
+        return(new_dict)
