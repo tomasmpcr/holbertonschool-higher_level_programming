@@ -86,7 +86,15 @@ class Rectangle(Base):
 
     def display(self):
         """ Funcion """
-        print((("#" * self.__width) + "\n") * self.__height, end="")
+        print(
+            (
+                ("\n" * self.y) +
+                (
+                    (" " * self.x) +
+                    ("#" * self.__width) + "\n"
+                )
+                * self.__height)
+            , end="")
         return
 
     def __str__(self):
