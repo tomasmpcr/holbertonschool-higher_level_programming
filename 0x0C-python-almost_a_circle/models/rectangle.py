@@ -99,6 +99,7 @@ class Rectangle(Base):
         ))
 
     def update(self, *args):
+        """ Funcion """
         switcher = {
             1: lambda value: [None for self.id in [value]],
             2: lambda value: [None for self.width in [value]],
