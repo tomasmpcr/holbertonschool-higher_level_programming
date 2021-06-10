@@ -20,6 +20,7 @@ class Base():
             Base.__nb_objects = Base.__nb_objects + 1
             self.id = Base.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """ Funcion """
         if list_dictionaries is None:
