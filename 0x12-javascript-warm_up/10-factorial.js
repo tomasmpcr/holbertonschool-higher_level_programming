@@ -1,7 +1,11 @@
 #!/usr/bin/node
 const { argv } = require('process');
 
-console.log(fact(parseInt(argv[2])));
+if (parseInt(argv[2])) {
+  console.log(fact(parseInt(argv[2])));
+} else {
+ console.log(1); 
+}
 
 function fact (numMax, i = 1) {
   if (numMax <= i) {
