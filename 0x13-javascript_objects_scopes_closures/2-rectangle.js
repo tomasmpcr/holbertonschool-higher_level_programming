@@ -1,18 +1,17 @@
 #!/usr/bin/node
 
 class Rectangle {
-  constructor (width, height) {
-    if (!parseInt(width) || width <= 0) {
-      console.log(width);
+  constructor (w, h) {
+    if (!parseInt(w) || w <= 0) {
       return;
     }
 
-    if (!parseInt(height) || height <= 0) {
+    if (!parseInt(h) || h <= 0) {
       return;
     }
 
-    this.width = width;
-    this.height = height;
+    this.width = w;
+    this.height = h;
   }
 }
 
