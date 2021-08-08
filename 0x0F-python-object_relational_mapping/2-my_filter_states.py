@@ -12,7 +12,7 @@ if __name__ == "__main__":
     cur = conn.cursor()
 
     sql = "SELECT * FROM states "
-    sql += "WHERE states.name = '"+argv[4]+"' ORDER BY states.id ASC;"
+    sql += "WHERE states.name = '{}' ORDER BY states.id ASC;".format(argv[4])
     cur.execute(sql)
     query_rows = cur.fetchall()
 
