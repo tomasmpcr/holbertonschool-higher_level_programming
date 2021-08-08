@@ -9,7 +9,7 @@ if __name__ == "__main__":
                                  db=argv[3])
 
     cur = miConexion.cursor()
-    cur.execute("SELECT * FROM states")
+    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
 
     for row in cur.fetchall():
         print(row)
