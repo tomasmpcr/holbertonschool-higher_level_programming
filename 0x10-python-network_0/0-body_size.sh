@@ -1,4 +1,4 @@
 #!/bin/bash
 # lenght
-LEN=$(curl -so /dev/null "$1" -w '%{size_download}')
-echo "$LEN"
+RETURN=$(curl -s -I http://www.google.com | grep Content-Length | cut -d" " -f2)
+echo -n "$RETURN"
