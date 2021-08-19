@@ -1,4 +1,3 @@
 #!/bin/bash
-# lenght
-LEN=$(curl -s -X GET "$1")
-echo "$LEN"
+# lenght adfdsf df 
+curl -s -X GET "$1"
