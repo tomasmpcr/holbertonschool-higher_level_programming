@@ -1,4 +1,4 @@
 #!/bin/bash
 # lenght
-RETURN=$(curl -s -I http://www.google.com | grep Content-Length | cut -d" " -f2)
+RETURN=$(curl -s -I $1 | grep Content-Length | cut -d" " -f2)
 echo -n "$RETURN"
