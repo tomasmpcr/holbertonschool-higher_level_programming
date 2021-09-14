@@ -13,7 +13,7 @@ request(options, function (err, res, body) {
     const obj = JSON.parse(body);
     obj.results.forEach(element => {
       element.characters.forEach(element2 => {
-        if (element2 === 'https://swapi-api.hbtn.io/api/people/18/') {
+        if (element2.includes('/18/')) {
           count++;
         }
       });
