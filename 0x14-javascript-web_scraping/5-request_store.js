@@ -11,7 +11,7 @@ request(options, function (err, res, body) {
     console.log(err);
   } else {
     try {
-      fs.writeFile('loripsum', body, 'utf8', function (err, data) {
+      fs.writeFile(process.argv[3], body, 'utf8', function (err, data) {
         if (err) {
           return console.log(err);
         }
